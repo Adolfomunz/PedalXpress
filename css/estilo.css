@@ -1,26 +1,3 @@
-
-.drophovercustom
-{
-    color:white
-}
-.drophovercustom:hover{
-    background: #ff5454;
-    color: white;
-    
-}
-
-.sesiontext:hover{
-    color:white;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
-    transition: 0.3s;
-    
-}
-
-.nodecolink
-{
-    text-decoration: none;
-    font-weight:600;
-}
 .sau2 {
     padding: 40px;
     height: 90vh;
@@ -31,15 +8,16 @@
 }
 
 .card {
-    height: 300px; /* Altura fija para todas las tarjetas */
+    height: 500px;
 }
 
 .card-img-top {
-    height: 50%; /* Altura del 50% del contenedor de la tarjeta */
-    object-fit: cover; /* Ajusta la imagen para cubrir el área asignada */
+    height: 300px; 
+    width: 100%; 
+    object-fit: cover; 
 }
 
 .card-body {
-    height: 100%; /* Altura del 50% del contenedor de la tarjeta */
-    overflow: auto; /* Agrega scroll si el contenido excede la altura */
+    height: 60%; 
+    overflow: auto; 
 }
