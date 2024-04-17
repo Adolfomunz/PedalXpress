@@ -1,0 +1,38 @@
+ /**
+{
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+} 
+
+*/
+.drophovercustom
+{
+    color:white
+}
+.drophovercustom:hover{
+    background: #ff5454;
+    color: white;
+    
+}
+
+.sesiontext:hover{
+    color:white;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    transition: 0.3s;
+    
+}
+
+.nodecolink
+{
+    text-decoration: none;
+    font-weight:600;
+}
+.sau2 {
+    padding: 40px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
