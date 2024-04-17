@@ -1,11 +1,4 @@
- /**
-{
-    border-color: blue;
-    border-width: 1px;
-    border-style: solid;
-} 
 
-*/
 .drophovercustom
 {
     color:white
@@ -35,4 +28,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center
+}
+
+.card {
+    height: 300px; /* Altura fija para todas las tarjetas */
+}
+
+.card-img-top {
+    height: 50%; /* Altura del 50% del contenedor de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área asignada */
+}
+
+.card-body {
+    height: 100%; /* Altura del 50% del contenedor de la tarjeta */
+    overflow: auto; /* Agrega scroll si el contenido excede la altura */
 }
