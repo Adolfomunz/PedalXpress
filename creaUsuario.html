@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="#">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+                <span class="ms-2">PedalXpress</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
+                            <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
+                            <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Hisotrial de compra</a></li>
+                            <li><a class="dropdown-item" href="#">Informacion personal</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-6    ">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Registro de Usuario</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Ingresa tu correo electrónico">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Correo electrónico</label>
+                                <input type="password" class="form-control" id="correo"
+                                    placeholder="Ingresa tu correo electrónico">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Direccion</label>
+                                <input type="password" class="form-control" id="direccion"
+                                    placeholder="Ingresa tu direccion">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Ingresa tu contraseña">
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirm_password" class="form-label">Confirmar contraseña:</label>
+                                <input type="password" class="form-control" id="confirm_password"
+                                    placeholder="Confirma tu contraseña">
+                            </div>
+                            <a href="index.html" class="btn btn-primary btn-block mt-2">Registrarse</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+         
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  
+</body>
+</html>
