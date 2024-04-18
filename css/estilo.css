@@ -22,3 +22,16 @@
     overflow: auto; 
 }
 
+img[alt="imgIndex"] {
+    border: 2px solid #000000; /* Borde rojo de 2px */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de estilo al pasar el ratón por encima */
+img[alt="imgIndex"]:hover {
+    transform: scale(1.05); /* Escala al 105% al pasar el ratón */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
