@@ -1,14 +1,14 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
-    margin:0; 
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none; 
-    border:none;
+    outline: none;
+    border: none;
     text-decoration: none;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,33 +16,34 @@ body{
     height: 100vh;
 }
 
-.formulario{
+.formulario {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 80%; /* Reducimos el ancho del formulario para dispositivos móviles */
+    max-width: 400px; /* Establecemos un ancho máximo para que no se vea demasiado grande en dispositivos grandes */
     background: white;
     border-radius: 10px;
     padding: 20px;
 }
 
-.formulario h2{
+.formulario h2 {
     text-align: center;
     padding-bottom: 20px;
 }
 
-.formulario form{
-    padding: 0 40px;
+.formulario form {
+    padding: 0 20px; /* Reducimos el relleno para dispositivos móviles */
     box-sizing: border-box;
 }
 
 .campo {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 30px; /* Reducimos el margen inferior para dispositivos móviles */
 }
 
-.campo input{
+.campo input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -50,28 +51,28 @@ body{
     background: #f8f9fa;
     border-radius: 5px;
     outline: none;
-    border-bottom: 2px solid transparent; /* Agregamos un borde transparente */
-    transition: border-bottom-color 0.3s; /* Agregamos una transición */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
 }
 
-.campo label{
+.campo label {
     position: absolute;
     top: -15px;
     left: 5px;
     color: #6C3483;
     font-size: 14px;
-    background: #fff; /* Cambiamos el fondo a blanco */
+    background: #fff;
     padding: 0 5px;
-    transition: top 0.3s, font-size 0.3s, color 0.3s; /* Agregamos transiciones */
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
 }
 
 .campo input:focus,
 .campo input:valid {
-    border-bottom-color: #6C3483; /* Cambiamos el color del borde inferior */
+    border-bottom-color: #6C3483;
 }
 
 .campo input:focus ~ label,
-.campo input:valid ~ label{
+.campo input:valid ~ label {
     top: -25px;
     font-size: 12px;
     color: #6C3483;
