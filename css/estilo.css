@@ -31,10 +31,12 @@ body{
     overflow: auto; 
 }
 
+
 /* por posibles cambios a otro css*/
 .container .pagination{
     display: flex;
     justify-content: center;
     margin-top: 3rem; /* Ajusta este valor según sea necesario */
 }
+
 
