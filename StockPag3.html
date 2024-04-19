@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockPag3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estiloAdminStock.css">
+</head>
+
+<body>
+    <!-- Contenido principal -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+                <span class="ms-2">PedalXpress</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
+                            <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
+                            <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admi.html">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Hisotrial de compra</a></li>
+                            <li><a class="dropdown-item" href="#">Informacion personal</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Boton Agregar -->
+    <div class="container position-relative">
+        <button class="btn btn-primary btn-sm mt-2 ms-2 position-absolute top-20 start-0" data-bs-toggle="modal" data-bs-target="#formularioModal"> Agregar <i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn-primary btn-sm mt-2 position-absolute top-20 start-35" style="left: 110px;">
+            <a href="AdminOpciones.html" style="color: black;">Volver <i class="fa-solid fa-reply"></i></a> 
+        </button>
+        <h1 class="mt-5 mb-4">Stock</h1>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Crear Nuevo Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="nombreProducto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="urlImagen" class="form-label">URL de la Imagen</label>
+                            <input type="url" class="form-control" id="urlImagen">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Cantidad Stock</label>
+                            <input type="number" class="form-control" id="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">Categoría:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="categoriaBicicleta" value="bicicleta">
+                                <label class="form-check-label" for="categoriaBicicleta">
+                                    Bicicleta
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="categoriaComponente" value="componente">
+                                <label class="form-check-label" for="categoriaComponente">
+                                    Componente
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="categoriaEquipamiento" value="equipamiento">
+                                <label class="form-check-label" for="categoriaEquipamiento">
+                                    Equipamiento
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+            <!-- Primer producto -->
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/Equipamiento/foxcasco1.png" class="img-fluid" alt="Producto 1">
+          </div>
+          <div class="col-md-6">
+            <h3>Casco Bicicleta Dropframe Pro Verde Fox</h3>
+            <p class="mb-3">$ 159.990</p>
+            <p class="mb-3">El sistema multidireccional de protección contra los impactos MIPS™ reduce las fuerzas rotativas en caso de accidente
+                El forro de EPS Varizorb™ de doble densidad ofrece una mejor protección frente a los impactos
+                8 grandes orificios de ventilación de entrada y 7 de salida para que fluya el aire fresco y mejorar la gestión de la humedad
+                Peso: 750 g, talla mediana MATERIALES</p>
+                        <div class="d-flex align-items-center">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                        </div>
+                    </div>
+                    <!-- Boton Eliminar -->
+                    <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            Eliminar
+                        </button>
+                    </div>
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+            
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                </div>
+            
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+             
+            <!-- Segundo producto -->
+                        <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="img/Equipamiento/foxcasco2.png" class="img-fluid" alt="Producto 2">
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Casco Bicicleta Rampage Blanco Fox</h3>
+                                <p class="mb-3">$ 299.900</p>
+                                <p class="mb-3">El sistema probado de protección contra impactos MIPS™ reduce las fuerzas de rotación en un choque
+                                                Carcasa ligera de ABS moldeado por inyección
+                                                Inspirado en nuestro Rampage Pro Carbon probado en podios
+                                                Las pantallas de ventilación de malla brindan ventilación mientras filtran la suciedad y los desechos
+                                                Cierre de anillo en D</p>
+                                <div class="d-flex align-items-center">
+                                    <label for="cantidad">Cantidad:</label>
+                                    <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                                </div>
+                            </div>
+                            <!-- Boton Eliminar -->
+                            <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                    Eliminar
+                                </button>
+                            </div>
+                    
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                    
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                    
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                        </div>
+                    
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+            <!-- Tercer producto -->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="img/Equipamiento/foxpolera1.png" class="img-fluid" alt="Producto 3">
+                            </div>
+                                <div class="col-md-6">
+                                    <h3>Polera Bicicleta Defend Manga Larga Esmeralda Fox</h3>
+                                    <p class="mb-3">$ 49.990 </p>
+                                    <p class="mb-3">UNA CAMISETA TÉCNICA DE MOUNTAIN BIKE HECHA PARA RESISTIRLO TODO Y SUBIRSE AL PODIO
+                                                    La camiseta técnica de manga larga Defend Fox Head está hecha para atacar los caminos a la velocidad de la luz y darte un rendimiento ganador con mucho estilo.
+                                                    Con tejido TruDri™ que aleja el sudor del cuerpo y te mantiene fresco y seco
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <label for="cantidad">Cantidad:</label>
+                                        <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                                    </div>
+                                </div>
+                            <!-- Boton Eliminar -->
+                            <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                    Eliminar
+                                </button>
+                            </div>
+                    
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                    
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                    
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                        </div>
+                    
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+            <!-- Cuarto producto -->
+            
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/Equipamiento/foxshort1.png" class="img-fluid" alt="Producto 4">
+          </div>
+          <div class="col-md-6">
+            <h3>Short Bicicleta Ranger Lite Negro Fox</h3>
+            <p class="mb-3">$ 62.990</p>
+            <p class="mb-3">El tejido elástico antidesgarrones maximiza el rendimiento en cada carrera
+                            Corte holgado para mejorar el rendimiento en la bici y el estilo cuando te bajes de ella
+                            Forro extraíble con badana de doble densidad para una mayor comodidad sobre el sillín</p>
+                        <div class="d-flex align-items-center">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                        </div>
+                    </div>
+                    <!-- Boton Eliminar -->
+                    <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            Eliminar
+                        </button>
+                    </div>
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+            
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                </div>
+            
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Quinto producto -->
+            
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/Equipamiento/foxpantalon1.png" class="img-fluid" alt="Producto 5">
+          </div>
+          <div class="col-md-6">
+            <h3>Pantalon Bicicleta Defend Negro Fox</h3>
+            <p class="mb-3">$ 129.990</p>
+            <p class="mb-3">Bolsillos para las manos con cremallera que te ofrecen almacenamiento para todo el día
+                Piezas de Cordura® en las rodillas para incrementar la resistencia a la abrasión
+                El tejido TruDri™ aleja el sudor del cuerpo para mantener la piel seca
+                El tejido TruMotion™ elástico en todas las direcciones ofrece una total libertad de movimientos
+                Cierre de hebilla perfecto para competición que ofrece un ajuste seguro y rápido sobre la marcha</p>
+                        <div class="d-flex align-items-center">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                        </div>
+                    </div>
+                    <!-- Boton Eliminar -->
+                    <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            Eliminar
+                        </button>
+                    </div>
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+            
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                </div>
+            
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--paginador-->
+    <div class="container mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:history.back()">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="StockPag1.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="StockPag2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="StockPag3.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+    
+    
+
+    <!-- Enlaces a los archivos JS de Bootstrap y jQuery (si es necesario) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockPag2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estiloAdminStock.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+                <span class="ms-2">PedalXpress</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
+                            <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
+                            <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admi.html">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Hisotrial de compra</a></li>
+                            <li><a class="dropdown-item" href="#">Informacion personal</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Boton Agregar -->
+    <div class="container position-relative">
+        <button class="btn btn-primary btn-sm mt-2 ms-2 position-absolute top-20 start-0" data-bs-toggle="modal" data-bs-target="#formularioModal"> Agregar <i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn-primary btn-sm mt-2 position-absolute top-20 start-35" style="left: 110px;">
+            <a href="AdminOpciones.html" style="color: black;">Volver <i class="fa-solid fa-reply"></i></a> 
+        </button>
+        <h1 class="mt-5 mb-4">Stock</h1>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Crear Nuevo Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="nombreProducto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="urlImagen" class="form-label">URL de la Imagen</label>
+                            <input type="url" class="form-control" id="urlImagen">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Cantidad Stock</label>
+                            <input type="number" class="form-control" id="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">Categoría:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="categoriaBicicleta" value="bicicleta">
+                                <label class="form-check-label" for="categoriaBicicleta">
+                                    Bicicleta
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="categoriaComponente" value="componente">
+                                <label class="form-check-label" for="categoriaComponente">
+                                    Componente
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="categoriaEquipamiento" value="equipamiento">
+                                <label class="form-check-label" for="categoriaEquipamiento">
+                                    Equipamiento
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contenido principal -->
+            <!-- Primer producto -->
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/Componentes/fox40.jpg.png" class="img-fluid" alt="Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023</h3>
+                        <p class="mb-3">$ 2.199.900</p>
+                        <p class="mb-3">Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023 2023_22, 40, K, FLOAT, 29in, F-S, 203, Grip 2, HSC, LSC, HSR, LSR, Shiny Orange,
+                            Black/Clear Logo, 20TAx110, 1.125, Drop, 52mm Rake Matte Blk, AM</p>
+                        <div class="d-flex align-items-center">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                        </div>
+                    </div>
+                    <!-- Boton Eliminar -->
+                    <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            Eliminar
+                        </button>
+                    </div>
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+            
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                </div>
+            
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+             
+            <!-- Segundo producto -->
+                        <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="img/Componentes/boxxer2017.png" class="img-fluid" alt="Producto1">
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Horquilla ROCKSHOX BOXXER Team 27,5" 200 mm Coil Eje 20 mm Negro 2018</h3>
+                                <p class="mb-3">$ 799.900</p>
+                                <p class="mb-3">Con las mismas prestaciones que la RC, la BoXXer Team 27,5" 200 mm 2017 se
+                                    distingue de ella por su nuevo cartucho de compresión Charger.
+                                    Ya conquistó la Pike y ahora llega a la BoXXer.</p>
+                                <div class="d-flex align-items-center">
+                                    <label for="cantidad">Cantidad:</label>
+                                    <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                                </div>
+                            </div>
+                            <!-- Boton Eliminar -->
+                            <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                    Eliminar
+                                </button>
+                            </div>
+                    
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                    
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                    
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                        </div>
+                    
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+            <!-- Tercer producto -->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="img/Componentes/i9hydra.jpg" class="img-fluid" alt="Producto 3">
+                            </div>
+                            <div class="col-md-6">
+                                <h3>SET MAZAS INDUSTRY NINE HYDRA 32H 15X110 - 12X148 NEGRA</h3>
+                                <p class="mb-3">$ 549.990 </p>
+                                <p class="mb-3">Industry Nine fabrica juegos de ruedas de alta calidad en Asheville, EE. UU.,
+                                    con su destacada maza Hydra. Fabricadas en aluminio 7075 T6,
+                                    ofrecen un enganche interno rápido y sin punto muerto. Con 11 opciones de color anodizado y
+                                    estándares de calidad estadounidenses,
+                                    todo el proceso se realiza en su propia instalación para garantizar la excelencia del
+                                    producto.</p>
+                                    <div class="d-flex align-items-center">
+                                        <label for="cantidad">Cantidad:</label>
+                                        <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                                    </div>
+                            </div>
+                            <!-- Boton Eliminar -->
+                            <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                    Eliminar
+                                </button>
+                            </div>
+                    
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                    
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                    
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                        </div>
+                    
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+            <!-- Cuarto producto -->
+            
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/Componentes/rueda1.png" class="img-fluid" alt="Producto 4">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Rueda Completa Industry Nine EN 305 Maza trasera Hydra 32h 12x148mm</h3>
+                        <p class="mb-3">$ 499.990</p>
+                        <p class="mb-3">Enganche interno rápido
+                            Maza fabricada en Asheville USA
+                            Aro 29
+                            32 hoyos.</p>
+                        <div class="d-flex align-items-center">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                        </div>
+                    </div>
+                    <!-- Boton Eliminar -->
+                    <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            Eliminar
+                        </button>
+                    </div>
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+            
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                </div>
+            
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Quinto producto -->
+            
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/Componentes/piñon1.png" class="img-fluid" alt="Producto 5">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Piñon X0 XS-1295 T-Type Eagle 10-52 12V</h3>
+                        <p class="mb-3">$ 479.990</p>
+                        <p class="mb-3">Acabado Dark Polar
+                            Compatible con una línea de cadena de 55 mm
+                            Piñón de 52 dientes
+                            Progresión de cambio mejorada con piñones de 44 y 38 dientes
+                            Instalación sencilla </p>
+                        <div class="d-flex align-items-center">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" class="form-control mx-2" value="1" min="1">
+                        </div>
+                    </div>
+                    <!-- Boton Eliminar -->
+                    <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            Eliminar
+                        </button>
+                    </div>
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">¿Deseas Eliminar?</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+            
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Estás eliminando Horquilla Fox 40K FLOAT 29in 203mm GRIP2 Orange 2023
+                                </div>
+            
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--paginador-->
+    <div class="container mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:history.back()">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="StockPag1.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="StockPag2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="StockPag3.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+    
+    
+
+    <!-- Enlaces a los archivos JS de Bootstrap y jQuery (si es necesario) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
