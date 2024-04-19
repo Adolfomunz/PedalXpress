@@ -13,116 +13,114 @@
 </head>
 <body>
     <!-- Navbar -->
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
-            <span class="ms-2">PedalXpress</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
-                        <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
-                        <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Admi.html">Administración</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="carrito.html">Carrito de compras</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Usuario
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Hisotrial de compra</a></li>
-                        <li><a class="dropdown-item" href="PerfilUsuario.html">Informacion personal</a></li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
-
-
-<div class="container">
-    <div class="profile-container p-4">
-        <h1 class="text-center mb-4">Perfil de Usuario</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/Perfil/fondo-perfil.png" class="card-img-top" alt="Imagen de ejemplo">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="profile-info">
-                    <label for="username" class="form-label">Nombre de usuario:</label>
-                    <p id="username" class="form-control" contenteditable="false">Usuario123</p>
-                </div>
-                <div class="profile-info">
-                    <label for="email" class="form-label">Correo electrónico:</label>
-                    <p id="email" class="form-control" contenteditable="false">usuario123@example.com</p>
-                </div>
-                <div class="profile-info">
-                    <label for="age" class="form-label">Edad:</label>
-                    <p id="age" class="form-control" contenteditable="false">25</p>
-                </div>
-                <div class="profile-info">
-                    <label for="country" class="form-label">País:</label>
-                    <p id="country" class="form-control" contenteditable="false">País de Ejemplo</p>
-                </div>
-                <div class="profile-info">
-                    <label for="bio" class="form-label">Biografía:</label>
-                    <p id="bio" class="form-control" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus libero a nunc eleifend convallis. Phasellus fermentum tristique risus. Proin quis lorem sit amet turpis volutpat rutrum nec at nisl. Nulla facilisi.</p>
-                </div>
-                <button class="btn btn-primary" onclick="habilitarEdicion()">Editar</button>
-                <button class="btn btn-success d-none" onclick="guardarCambios()">Guardar</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+                <span class="ms-2">PedalXpress</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
+                            <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
+                            <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admi.html">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="HistorialCompras.html">Hisotrial de compra</a></li>
+                            <li><a class="dropdown-item" href="PerfilUsuario.html">Informacion personal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
-    </div>
-</div>
-<script>
-    function habilitarEdicion() {
-        var elementosEditable = document.querySelectorAll('.form-control');
-        elementosEditable.forEach(function(elemento) {
-            elemento.contentEditable = true;
-        });
-        document.querySelector('.btn-primary').classList.add('d-none');
-        document.querySelector('.btn-success').classList.remove('d-none');
-    }
+    </nav>
 
-    function guardarCambios() {
-        var elementosEditable = document.querySelectorAll('.form-control');
-        elementosEditable.forEach(function(elemento) {
-            elemento.contentEditable = false;
-        });
-        document.querySelector('.btn-primary').classList.remove('d-none');
-        document.querySelector('.btn-success').classList.add('d-none');
-    }
-</script>
+
+    <div class="container">
+        <div class="profile-container p-4">
+            <h1 class="text-center mb-4">Perfil de Usuario</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/Perfil/fondo-perfil.png" class="card-img-top" alt="Imagen de ejemplo">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-info">
+                        <label for="username" class="form-label">Nombre de usuario:</label>
+                        <p id="username" class="form-control" contenteditable="false">Usuario123</p>
+                    </div>
+                    <div class="profile-info">
+                        <label for="email" class="form-label">Correo electrónico:</label>
+                        <p id="email" class="form-control" contenteditable="false">usuario123@example.com</p>
+                    </div>
+                    <div class="profile-info">
+                        <label for="age" class="form-label">Edad:</label>
+                        <p id="age" class="form-control" contenteditable="false">25</p>
+                    </div>
+                    <div class="profile-info">
+                        <label for="country" class="form-label">País:</label>
+                        <p id="country" class="form-control" contenteditable="false">País de Ejemplo</p>
+                    </div>
+                    <div class="profile-info">
+                        <label for="bio" class="form-label">Biografía:</label>
+                        <p id="bio" class="form-control" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus libero a nunc eleifend convallis. Phasellus fermentum tristique risus. Proin quis lorem sit amet turpis volutpat rutrum nec at nisl. Nulla facilisi.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="habilitarEdicion()">Editar</button>
+                    <button class="btn btn-success d-none" onclick="guardarCambios()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function habilitarEdicion() {
+            var elementosEditable = document.querySelectorAll('.form-control');
+            elementosEditable.forEach(function(elemento) {
+                elemento.contentEditable = true;
+            });
+            document.querySelector('.btn-primary').classList.add('d-none');
+            document.querySelector('.btn-success').classList.remove('d-none');
+        }
+
+        function guardarCambios() {
+            var elementosEditable = document.querySelectorAll('.form-control');
+            elementosEditable.forEach(function(elemento) {
+                elemento.contentEditable = false;
+            });
+            document.querySelector('.btn-primary').classList.remove('d-none');
+            document.querySelector('.btn-success').classList.add('d-none');
+        }
+    </script>
 
 
     

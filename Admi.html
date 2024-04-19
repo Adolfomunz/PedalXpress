@@ -12,82 +12,81 @@
         <link rel="stylesheet" href="css/estiloAdmin.css">
     </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
-            <span class="ms-2">PedalXpress</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
-                        <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
-                        <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Admi.html">Administración</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="carrito.html">Carrito de compras</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Usuario
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Hisotrial de compra</a></li>
-                        <li><a class="dropdown-item" href="#">Informacion personal</a></li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+                <span class="ms-2">PedalXpress</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
+                            <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
+                            <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admi.html">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="HistorialCompras.html">Hisotrial de compra</a></li>
+                            <li><a class="dropdown-item" href="PerfilUsuario.html">Informacion personal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Login Admin -->  
-<div class="container mt-3">
-    <div class="formulario">
-      <h2>Administración</h2>
-      <form action="AdminOpciones.html" method="POST">
-        <div class="campo">
-          <input type="email" id="email" placeholder=" " name="email" required>
-          <label for="email">Correo Electrónico</label>
+    <!-- Contenido de la página -->  
+    <div class="container mt-3">
+        <div class="formulario">
+        <h2>Administración</h2>
+        <form action="AdminOpciones.html" method="POST">
+            <div class="campo">
+            <input type="email" id="email" placeholder=" " name="email" required>
+            <label for="email">Correo Electrónico</label>
+            </div>
+            <div class="campo">
+            <input type="password" id="pwd" placeholder=" " name="pswd" required>
+            <label for="pwd">Contraseña</label>
+            </div>
+            <div class="form-check mb-3">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Recordarme
+            </label>
+            </div>
+            <a href="AdminOpciones.html" class="btn btn-primary btn-block mt-2">Iniciar sesión</a>
+        </form>
         </div>
-        <div class="campo">
-          <input type="password" id="pwd" placeholder=" " name="pswd" required>
-          <label for="pwd">Contraseña</label>
-        </div>
-        <div class="form-check mb-3">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Recordarme
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Confirmar</button>
-      </form>
     </div>
-</div>
     
  
  
