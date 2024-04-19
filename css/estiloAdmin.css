@@ -77,3 +77,28 @@ body {
     font-size: 12px;
     color: #6C3483;
 }
+
+
+/* Estilo para el título */
+.titulo,
+p 
+{
+    text-align: center;
+    margin-bottom: 20px; /* Agrega un margen inferior para separarlo del contenido siguiente */
+}
+
+/* Estilo para los botones */
+.Botones {
+    text-align: center; /* Centra los botones */
+}
+
+/* Estilo para los botones personalizados */
+.btn-custom {
+    margin: 5px; /* Agrega un pequeño margen entre los botones */
+}
+
+/* Estilo para el enlace dentro de los botones */
+.btn-link {
+    color: inherit; /* Usa el color de texto predeterminado */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
