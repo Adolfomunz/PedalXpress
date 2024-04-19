@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripcion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estiloDesc.css">
+    <style>
+        @media (max-width: 768px) {
+            .carousel-inner {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+
+            .carousel-item {
+                flex: 0 0 auto;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+                <span class="ms-2">PedalXpress</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                            <li><a class="dropdown-item" href="bicicleta.html">Bicicletas</a></li>
+                            <li><a class="dropdown-item" href="componentes.html">Componentes</a></li>
+                            <li><a class="dropdown-item" href="equipamiento.html">Equipamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuario" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsuario">
+                            <li><a class="dropdown-item" href="#">Historial de compra</a></li>
+                            <li><a class="dropdown-item" href="#">Información personal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/descripcion/foto2.png" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/descripcion/foto1.png" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/descripcion/foto3.png" class="d-block w-100" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/descripcion/foto4.png" class="d-block w-100" alt="Imagen 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2>Bicicleta Mountain Bike Glory Advanced Pro MX 0</h2>
+                <p class="lead smaller-text">Respaldada por su pedigrí en los campeonatos del mundo, esta bicicleta de descenso full carbon vuelve a la acción con 200 mm de suspensión trasera Maestro rediseñada y múltiples formas de ajustar la geometría,
+                                la posición del ciclista y el tamaño de la rueda trasera. Todo es nuevo, lleva años gestándose y llega directa a los podios de las carreras de todo el mundo.</p>
+                <p>Detalles adicionales del producto:</p>
+                <ul>
+                    <li>Colores: Shoreline/Carbon </li>
+                    <li>Cuadro: Advanced-grade composite front and rear triangles, 200mm Maestro</li>
+                    <li>Horquilla: Fox 40 Factory, GRIP2 damper, 203mm, 20x110, custom tuned for Giant</li>
+                </ul>
+                <p class="text-muted">Precio: $ 7.990.000</p>
+                <button onclick="window.location.href='pago.html'" class="btn btn-primary">Comprar</button>
+                <button onclick="window.location.href='carrito.html'" class="btn btn-success">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
